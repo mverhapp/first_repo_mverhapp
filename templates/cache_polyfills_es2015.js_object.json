@@ -1,0 +1,38 @@
+{
+    "name": "Cache polyfills-es2015.js Object",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "caching",
+            "options": {
+                "behavior": "MAX_AGE",
+                "mustRevalidate": false,
+                "ttl": "${env.ttl_polyfills}"
+            }
+        },
+        {
+            "name": "downstreamCache",
+            "options": {
+                "behavior": "ALLOW",
+                "allowBehavior": "FROM_VALUE",
+                "sendHeaders": "CACHE_CONTROL_AND_EXPIRES",
+                "sendPrivate": false,
+                "ttl": "${env.ttl_polyfills}"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "filename",
+            "options": {
+                "matchOperator": "IS_ONE_OF",
+                "matchCaseSensitive": true,
+                "values": [
+                    "polyfills-es2015.js"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all",
+    "comments": ""
+}

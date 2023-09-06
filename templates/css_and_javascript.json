@@ -1,0 +1,31 @@
+{
+    "name": "CSS and JavaScript",
+    "children": [
+        "#include:cache_polyfills_es2015.js_object.json"
+    ],
+    "behaviors": [
+        {
+            "name": "caching",
+            "options": {
+                "behavior": "MAX_AGE",
+                "mustRevalidate": false,
+                "ttl": "${env.ttl_css}"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "fileExtension",
+            "options": {
+                "matchCaseSensitive": false,
+                "matchOperator": "IS_ONE_OF",
+                "values": [
+                    "css",
+                    "js"
+                ]
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "any",
+    "comments": "Override the default caching behavior for CSS and JavaScript"
+}

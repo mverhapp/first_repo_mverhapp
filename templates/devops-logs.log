@@ -1,0 +1,4 @@
+[2023-08-28T09:23:31.620] [INFO] devops-prov.factory - Switching account key to: 'undefined'
+[2023-08-28T09:23:31.622] [INFO] devops-prov.factory - Using credentials file: '/home/marcus/.edgerc', section: 'papi'
+[2023-08-28T09:23:43.012] [INFO] devops-prov.factory - Switching account key to: 'undefined'
+[2023-08-28T09:23:43.013] [INFO] devops-prov.factory - Using credentials file: '/home/marcus/.edgerc', section: 'papi'

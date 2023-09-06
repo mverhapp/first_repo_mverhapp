@@ -1,0 +1,44 @@
+{
+    "definitions": {
+        "originHostname": {
+            "type": "hostname",
+            "default": "juiceshopmverhapp.akaorigin.com"
+        },
+        "cpCode": {
+            "type": "cpCode",
+            "default": 1163888
+        },
+        "sureRouteTestObject": {
+            "type": "url",
+            "default": "/akamai/sure-route-test-object.html"
+        },
+        "ttl_offload_origin":{
+            "type":"ttl",
+            "default":"4s"
+        },
+        "ttl_css":{
+            "type":"ttl",
+            "default":"4d"
+        },
+        "ttl_polyfills":{
+            "type":"ttl",
+            "default":"12h"
+        },
+        "ttl_fonts":{
+            "type":"ttl",
+            "default":"15d"
+        },
+        "ttl_images":{
+            "type":"ttl",
+            "default":"15d"
+        },
+        "ttl_files":{
+            "type":"ttl",
+            "default":"4d"
+        },
+        "ttl_static_obj":{
+            "type":"ttl",
+            "default":"15d"
+        }
+    }
+}

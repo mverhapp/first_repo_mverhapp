@@ -1,0 +1,25 @@
+{
+    "name": "Adaptive acceleration",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "adaptiveAcceleration",
+            "options": {
+                "abLogic": "DISABLED",
+                "enablePreconnect": true,
+                "enablePush": true,
+                "enableRo": true,
+                "preloadEnable": true,
+                "source": "mPulse",
+                "titleHttp2ServerPush": "",
+                "titlePreconnect": "",
+                "titlePreload": "",
+                "titleRo": "",
+                "abTesting": ""
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": "Automatically and continuously apply performance optimizations to your website using machine learning."
+}

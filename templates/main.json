@@ -1,0 +1,51 @@
+{
+    "rules": {
+        "name": "default",
+        "children": [
+            "#include:augment_insights.json",
+            "#include:accelerate_delivery.json",
+            "#include:offload_origin.json",
+            "#include:minimize_payload.json",
+            "#include:cache_polyfills_es2015.js_object.json",
+            "#include:css_and_javascript.json",
+            "#include:fonts.json",
+            "#include:images.json",
+            "#include:files.json",
+            "#include:other_static_objects.json"
+        ],
+        "behaviors": [
+            {
+                "name": "origin",
+                "options": {
+                    "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                    "compress": true,
+                    "enableTrueClientIp": true,
+                    "forwardHostHeader": "ORIGIN_HOSTNAME",
+                    "httpPort": 80,
+                    "httpsPort": 443,
+                    "originCertificate": "",
+                    "originSni": true,
+                    "originType": "CUSTOMER",
+                    "ports": "",
+                    "trueClientIpClientSetting": false,
+                    "trueClientIpHeader": "True-Client-IP",
+                    "verificationMode": "CUSTOM",
+                    "hostname": "${env.originHostname}",
+                    "customValidCnValues": [
+                        "{{Origin Hostname}}",
+                        "{{Forward Host Header}}"
+                    ],
+                    "originCertsToHonor": "STANDARD_CERTIFICATE_AUTHORITIES",
+                    "standardCertificateAuthorities": [
+                        "akamai-permissive"
+                    ]
+                }
+            }
+        ],
+        "options": {
+            "is_secure": true
+        },
+        "variables": [],
+        "comments": "The Default Rule template contains all the necessary and recommended behaviors. Rules are evaluated from top to bottom and the last matching rule wins."
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "name": "Offload origin",
+    "children": [
+        "#include:css_and_javascript.json",
+        "#include:fonts.json",
+        "#include:images.json",
+        "#include:files.json",
+        "#include:other_static_objects.json",
+        "#include:html_pages.json",
+        "#include:redirects.json",
+        "#include:graphql.json",
+        "#include:uncacheable_objects.json"
+    ],
+    "behaviors": [
+        {
+            "name": "caching",
+            "options": {
+                "behavior": "NO_STORE"
+            }
+        },
+        {
+            "name": "tieredDistribution",
+            "options": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "validateEntityTag",
+            "options": {
+                "enabled": false
+            }
+        },
+        {
+            "name": "removeVary",
+            "options": {
+                "enabled": true
+            }
+        },
+        {
+            "name": "cacheError",
+            "options": {
+                "enabled": true,
+                "preserveStale": true,
+                "ttl": "${env.ttl_offload_origin}"
+            }
+        },
+        {
+            "name": "cacheKeyQueryParams",
+            "options": {
+                "behavior": "INCLUDE_ALL_ALPHABETIZE_ORDER"
+            }
+        },
+        {
+            "name": "prefreshCache",
+            "options": {
+                "enabled": true,
+                "prefreshval": 90
+            }
+        },
+        {
+            "name": "downstreamCache",
+            "options": {
+                "allowBehavior": "LESSER",
+                "behavior": "ALLOW",
+                "sendHeaders": "CACHE_CONTROL",
+                "sendPrivate": false
+            }
+        }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": "Control the settings related to caching content at the edge and in the browser. As a result, fewer requests go to your origin, fewer bytes leave your data centers, and your assets are closer to your users."
+}

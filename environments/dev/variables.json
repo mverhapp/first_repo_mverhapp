@@ -1,0 +1,10 @@
+{
+    "originHostname": "juiceshopmverhapp.akaorigin.com",
+    "ttl_offload_origin": "1s",
+    "ttl_css": "1d",
+    "ttl_polyfills": "4h",
+    "ttl_fonts": "5d",
+    "ttl_images": "5d",
+    "ttl_files": "1d",
+    "ttl_static_obj": "5d"
+}
