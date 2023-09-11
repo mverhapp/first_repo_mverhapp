@@ -5,7 +5,9 @@
         {
             "name": "caching",
             "options": {
-                "behavior": "NO_STORE"
+                "behavior": "MAX_AGE",
+                "mustRevalidate": false,
+                "ttl": "10s"
             }
         },
         {
