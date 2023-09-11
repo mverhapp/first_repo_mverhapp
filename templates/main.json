@@ -28,7 +28,7 @@
                     "originType": "CUSTOMER",
                     "ports": "",
                     "trueClientIpClientSetting": false,
-                    "trueClientIpHeader": "True-Client-IP",
+                    "trueClientIpHeader": "X-True-Client-IP",
                     "verificationMode": "CUSTOM",
                     "hostname": "${env.originHostname}",
                     "customValidCnValues": [
